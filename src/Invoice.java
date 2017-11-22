@@ -44,11 +44,7 @@ public class Invoice {
   
   public void determineCableSrv(int num1){
     
-    do {
-      //if(cablePkg != 1 && cablePkg != 2 && cablePkg != 3){
-      //setCablePkg(num1);
-      // }
-      
+    do {     
       switch (cablePkg) {       
         default:
           System.out.printf("%nInvalid! Choose 1,2 or 3.%n");
