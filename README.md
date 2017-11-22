@@ -12,3 +12,5 @@ TO DO LIST:
 3.) Optimize code.
 
 4.) Add comments.
+
+5.) Complete the psudocode worksheet.
