@@ -1,14 +1,21 @@
+/**
+* @(#)Invoice.java
+* @author(s) Adam Garibay && Mathew Jackson
+* @version 1.00 2017/11/22 @ 00:33
+* Program Purpose: This is the Invoice class that has five class variables.
+*/
+
 import java.util.Scanner;
 
 public class Invoice {
 
-    Scanner input = new Scanner(System.in);
-    String custNm = "";
-    int cablePkg = 0;
-    double cableSrv = 0;
-    int noOfMovies = 0;
+    Scanner input = new Scanner(System.in);  //new scanner
+    String custNm = "";   //declare and initialize custNm
+    int cablePkg = 0;     //declare and initialize cablePkg
+    double cableSrv = 0;  //declare and initialize cableSrv
+    int noOfMovies = 0;   //declare and initialize noOfMovies
 
-    public Invoice() {
+    public Invoice() {    //empty constructor
 
     }
 
@@ -19,27 +26,27 @@ public class Invoice {
 
     public void setCustNm(int num1) {
 
-        System.out.printf("%nWLECOME TO SA CABLE%n");
+        System.out.printf("%nWLECOME TO SA CABLE%n");  //output message header
         System.out.printf("%nPlease enter customer %d's name:  ", (num1+1));
-        this.custNm = input.nextLine();
+        this.custNm = input.nextLine();  //captures String input from user.
     }
 
     public void setCablePkg(int num1) {
-        System.out.printf("%nSA CABLE - SUBSCRIPTION PACKAGES - INCLUDES INTERNET SERVICE%n");
-        System.out.printf("%n1. Basic: Local & major TV network channels %26s %.2f", '$', 35.00);
-        System.out.printf("%n2. Deluxe: Local, major TV, cable & 100 other channels %21.2f", 75.00);
-        System.out.printf("%n3. Premium: Deluxe package plus HBO, on-demand & 300 other channels %8.2f", 110.00);
+        System.out.printf("%nSA CABLE - SUBSCRIPTION PACKAGES - INCLUDES INTERNET SERVICE%n");                          //output for cable package header
+        System.out.printf("%n1. Basic: Local & major TV network channels %26s %.2f", '$', 35.00);                       //outputs 1st pkg & cost
+        System.out.printf("%n2. Deluxe: Local, major TV, cable & 100 other channels %21.2f", 75.00);                    //outputs 2st pkg & cost
+        System.out.printf("%n3. Premium: Deluxe package plus HBO, on-demand & 300 other channels %8.2f", 110.00);       //outputs 3st pkg & cost
         System.out.printf("%n%nSelect the cable subscription package for customer %d:  ", (num1+1));
 
-        while (!input.hasNextInt()) {
+        while (!input.hasNextInt()) {  //while loop for when user does not input integer.
             input.next();
-            System.out.printf("%nYou must only enter an integer: %n");
-            System.out.printf("%n1. Basic: Local & major TV network channels %26s %.2f", '$', 35.00);
-            System.out.printf("%n2. Deluxe: Local, major TV, cable & 100 other channels %21.2f", 75.00);
-            System.out.printf("%n3. Premium: Deluxe package plus HBO, on-demand & 300 other channels %8.2f", 110.00);
+            System.out.printf("%nYou must only enter an integer: %n");                                                  //output for cable package header
+            System.out.printf("%n1. Basic: Local & major TV network channels %26s %.2f", '$', 35.00);                   //outputs 1st pkg & cost when user fails to input integer
+            System.out.printf("%n2. Deluxe: Local, major TV, cable & 100 other channels %21.2f", 75.00);                //outputs 2nd pkg & cost when user fails to input integer
+            System.out.printf("%n3. Premium: Deluxe package plus HBO, on-demand & 300 other channels %8.2f", 110.00);   //outputs 3rd pkg & cost when user fails to input integer
             System.out.printf("%n%nSelect the cable subscription package for customer %d:  ", (num1+1));
         }
-        this.cablePkg = input.nextInt();
+        this.cablePkg = input.nextInt();  //captures Int input from user.
     }
 
     public void determineCableSrv(int num1) {
@@ -47,21 +54,21 @@ public class Invoice {
         do {
             setCablePkg(num1);
 
-            switch (cablePkg) {
+            switch (cablePkg) {  //switch statment for cableSrv amounts in USD
 
             case 1:
-                this.cableSrv = 35.00;
-                break;
+                this.cableSrv = 35.00;   //1st cable service.
+                break;  //case break
             case 2:
-                this.cableSrv = 75.00;
-                break;
+                this.cableSrv = 75.00;   //2nd cable service.
+                break;  //case break
             case 3:
-                this.cableSrv = 110.00;
-                break;
+                this.cableSrv = 110.00;  //3rd cable service.
+                break;  //case break
             default:
-                System.out.printf("%nInvalid Selection!%n");
+                System.out.printf("%nInvalid Selection!%n"); //output for any Int ! 1 through 3
             }
-        } while (cablePkg < 1 || cablePkg > 3);
+        } while (cablePkg < 1 || cablePkg > 3); //while loop continues for any int < 1 or > 3 
     }
 
     public void setMoviesPurchased(int num1) {
