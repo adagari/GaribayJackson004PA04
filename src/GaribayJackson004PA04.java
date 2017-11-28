@@ -62,7 +62,7 @@ SA CABLE - MOVIES
  
 Enter the number of Movies-On-Demand-HD purchases for 2:   [DrJava Input Box]
  
-WLECOME TO SA CABLE 
+WELCOME TO SA CABLE 
  
 Please enter customer 3's name:   25
  
