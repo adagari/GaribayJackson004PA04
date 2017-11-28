@@ -26,7 +26,7 @@ public class Invoice {
 
     public void setCustNm(int num1) {
 
-        System.out.printf("%nWLECOME TO SA CABLE%n");  //output message header
+        System.out.printf("%nWELCOME TO SA CABLE%n");  //output message header
         System.out.printf("%nPlease enter customer %d's name:  ", (num1+1));
         this.custNm = input.nextLine();  //captures String input from user.
     }
