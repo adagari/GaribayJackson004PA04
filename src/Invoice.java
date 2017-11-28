@@ -9,11 +9,11 @@ import java.util.Scanner;
 
 public class Invoice {
 
-    Scanner input = new Scanner(System.in);  //new scanner
-    String custNm = "";   //declare and initialize custNm
-    int cablePkg = 0;     //declare and initialize cablePkg
-    double cableSrv = 0;  //declare and initialize cableSrv
-    int noOfMovies = 0;   //declare and initialize noOfMovies
+   private Scanner input = new Scanner(System.in);  //new scanner
+   private String custNm = "";   //declare and initialize custNm
+   private int cablePkg = 0;     //declare and initialize cablePkg
+   private double cableSrv = 0;  //declare and initialize cableSrv
+   private int noOfMovies = 0;   //declare and initialize noOfMovies
 
     public Invoice() {    //empty constructor
 
