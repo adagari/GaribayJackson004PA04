@@ -20,7 +20,7 @@ Do you want to begin processing cable  bills? Enter 'Y' or 'N':   y
  
 How many bills are there to process?   3
  
-WLECOME TO SA CABLE 
+WELCOME TO SA CABLE 
  
 Please enter customer 1's name:   gary dempsey
  
@@ -36,7 +36,7 @@ SA CABLE - MOVIES
  
 Enter the number of Movies-On-Demand-HD purchases for 1:   25
  
-WLECOME TO SA CABLE 
+WELCOME TO SA CABLE 
  
 Please enter customer 2's name:   rex dempsey
  
