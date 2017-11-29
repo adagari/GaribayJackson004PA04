@@ -44,7 +44,6 @@ public class Cable {
     for(int i=0; i < numBills; i++) {
       cableBills[i] = new Invoice();
       cableBills[i].setCustNm(i);
-      //cableBills[i].setCablePkg(i);
       cableBills[i].determineCableSrv(i);
       cableBills[i].setMoviesPurchased(i);
       
