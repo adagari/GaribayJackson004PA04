@@ -74,7 +74,7 @@ public class Invoice {
   public void setMoviesPurchased(int num1) {
     
     System.out.printf("%nSA CABLE - MOVIES%n");
-    System.out.printf("%nEnter the number of Movies-On-Demand-HD purchases for %d:  ", (num1+1));
+    System.out.printf("%nEnter the number of Movies-On-Demand-HD purchases for customer %d:  ", (num1+1));
     
     while (!input.hasNextInt()) {
       input.next();
