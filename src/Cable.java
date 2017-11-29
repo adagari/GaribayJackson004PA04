@@ -33,10 +33,8 @@ public class Cable {
   
   public void processBills() {
     
-    int numBills = 0;
-    
     System.out.printf("%nHow many bills are there to process?  ");
-    numBills = input.nextInt(); //captures int from user.
+    int numBills = input.nextInt(); //captures int from user.
     
     cableBills = new Invoice[numBills];
     billingStmts = new String[cableBills.length];
