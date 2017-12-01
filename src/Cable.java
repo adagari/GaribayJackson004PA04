@@ -16,18 +16,18 @@ public class Cable {
   private String[] billingStmts;                    //declare billingStmts array.
   
   
-/**
-*By Adam Garibay
-*This is any empty constructor.
-*/ 
+  /**
+   *By Adam Garibay
+   *This is any empty constructor.
+   */ 
   public Cable() {
   }
   
-/**
-*By Adam Garibay
-*This method captures char 'y' or 'n' to start the entire process.
-*If 'y' starts process, else receives printThankYou() method.
-*/
+  /**
+   *By Adam Garibay
+   *This method captures char 'y' or 'n' to start the entire process.
+   *If 'y' starts process, else receives printThankYou() method.
+   */
   public void start() {
     System.out.printf("%nDo you want to begin processing cable  bills? Enter 'Y' or 'N':  ");
     char answer = input.next().charAt(0); //captures char input from user.
@@ -40,13 +40,13 @@ public class Cable {
     }
   }
   
-/**
-*By Adam Garibay
-*This method captures the amount of bills the customer is ready to process.
-*Sets the array sizes, calls methods in a for loop, calculates the total
-*and movie charges, and adds them as a String.format to the billingStmts
-*array.
-*/ 
+  /**
+   *By Adam Garibay
+   *This method captures the amount of bills the customer is ready to process.
+   *Sets the array sizes, calls methods in a for loop, calculates the total
+   *and movie charges, and adds them as a String.format to the billingStmts
+   *array.
+   */ 
   public void processBills() {
     
     System.out.printf("%nHow many bills are there to process?  ");
@@ -73,10 +73,10 @@ public class Cable {
     }
   }
   
-/**
-*By Adam Garibay
-*This method uses an enhanced for loop to print out the billingStmts array.
-*/
+  /**
+   *By Adam Garibay
+   *This method uses an enhanced for loop to print out the billingStmts array.
+   */
   public void displayBills() {
     
     for (String billingStmts : billingStmts) {
@@ -87,10 +87,10 @@ public class Cable {
       
     }
   }
-/**
-*By Adam Garibay
-*This method thanks our valuable customers!
-*/
+  /**
+   *By Adam Garibay
+   *This method thanks our valuable customers!
+   */
   public void printThankYou() {
     
     System.out.printf("%nThank you for being a valued SA Cable Customer!%n%n");

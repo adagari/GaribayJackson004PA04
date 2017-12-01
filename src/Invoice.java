@@ -5,7 +5,7 @@
  * Program Purpose: This is the Invoice class that has five class variables.
  */
 
-import java.util.Scanner;
+import java.util.Scanner;  //import Scanner for user input.
 
 public class Invoice {
   
@@ -15,31 +15,19 @@ public class Invoice {
   private double cableSrv = 0;  //declare and initialize cableSrv
   private int noOfMovies = 0;   //declare and initialize noOfMovies
   
-/**
-*By Mathew Jackson
-*This is an empty constructor. 
-*/  
-  public Invoice() {
-    
+  /**
+   *By Mathew Jackson
+   *This is an empty constructor. 
+   */  
+  public Invoice() {    
   }
   
-/**
-*By Mathew Jackson
-*This method prints Welcome statement and captures
-*the customers 1st and last name.
-*@param custNm The customer name is set in global variable. 
-*/
-  public Invoice(String custNm) { 
-    
-    this.custNm = custNm;
-  }
-
-/**
-*By Mathew Jackson
-*This method prints Welcome statement and captures
-*the customers 1st and last name.
-*@param num1 loop control value from the loop that calls it. 
-*/
+  /**
+   *By Mathew Jackson
+   *This method prints Welcome statement and captures
+   *the customers 1st and last name.
+   *@param num1 loop control value from the loop that calls it. 
+   */
   public void setCustNm(int num1) {
     
     System.out.printf("%nWELCOME TO SA CABLE%n");  //output message header
@@ -47,11 +35,11 @@ public class Invoice {
     this.custNm = input.nextLine();  //captures String input from user.
   }
   
-/**
-*By Mathew Jackson
-*This method captures the cable subscription package.
-*@param num1 loop control value from the loop that calls it. 
-*/
+  /**
+   *By Mathew Jackson
+   *This method captures the cable subscription package.
+   *@param num1 loop control value from the loop that calls it. 
+   */
   public void setCablePkg(int num1) {
     System.out.printf("%nSA CABLE - SUBSCRIPTION PACKAGES - INCLUDES INTERNET SERVICE%n");                          //output for cable package header
     System.out.printf("%n1. Basic: Local & major TV network channels %26s %.2f", '$', 35.00);                       //outputs 1st pkg & cost
@@ -69,12 +57,12 @@ public class Invoice {
     }
     this.cablePkg = input.nextInt();  //captures Int input from user.
   }
-
-/**
-*By Mathew Jackson
-*This Method Assigns a Price for the Cable Service. 
-*@param num1 loop control value from the loop that calls it. 
-*/
+  
+  /**
+   *By Mathew Jackson
+   *This Method Assigns a Price for the Cable Service. 
+   *@param num1 loop control value from the loop that calls it. 
+   */
   public void determineCableSrv(int num1) {
     
     do {
@@ -96,12 +84,12 @@ public class Invoice {
       }
     } while (cablePkg < 1 || cablePkg > 3); //while loop continues for any int < 1 or > 3 
   }
-
-/**
-*By Mathew Jackson
-*This method captures the number of movies purchased.
-*@param num1 loop control value from the loop that calls it. 
-*/  
+  
+  /**
+   *By Mathew Jackson
+   *This method captures the number of movies purchased.
+   *@param num1 loop control value from the loop that calls it. 
+   */  
   public void setMoviesPurchased(int num1) {
     
     System.out.printf("%nSA CABLE - MOVIES%n");
@@ -114,39 +102,39 @@ public class Invoice {
     }
     this.noOfMovies = input.nextInt();
   }
- 
-/**
-*By Mathew Jackson
-*This is a value returning method for the amount of Movies-On-Demands.
-*@return The product of noOfMovies times 7.
-*/ 
+  
+  /**
+   *By Mathew Jackson
+   *This is a value returning method for the amount of Movies-On-Demands.
+   *@return The product of noOfMovies times 7.
+   */ 
   public int getMoviePurchased() {
     return noOfMovies * 7;
   }
- 
-/**
-*By Mathew Jackson
-*This method is a value returning method for the price of cable survice.
-*@return The amount for cableSrv.
-*/
+  
+  /**
+   *By Mathew Jackson
+   *This method is a value returning method for the price of cable survice.
+   *@return The amount for cableSrv.
+   */
   public double getCableSrv() {
     return cableSrv;
   }
- 
-/**
-*By Mathew Jackson
-*This method is a value returning method for the type of Cable Package.
-*@return The cablePkg selected.
-*/
+  
+  /**
+   *By Mathew Jackson
+   *This method is a value returning method for the type of Cable Package.
+   *@return The cablePkg selected.
+   */
   public int getCablePkg() {
     return cablePkg;
   }
-
-/**
-*By Mathew Jackson
-*This method is a value returning method for the customers name.
-*@return The customer name.
-*/
+  
+  /**
+   *By Mathew Jackson
+   *This method is a value returning method for the customers name.
+   *@return The customer name.
+   */
   public String getCustNm() {
     return custNm;
   }
