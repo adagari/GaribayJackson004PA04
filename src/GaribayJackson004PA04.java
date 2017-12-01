@@ -9,6 +9,8 @@ public class GaribayJackson004PA04 {
 
  /**
 *By Adam Garibay
+*This is the main method which creates and object
+*and calls the start() method.
 */
   public static void main(String[] args) {
     
