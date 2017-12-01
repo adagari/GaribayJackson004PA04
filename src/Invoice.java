@@ -59,7 +59,7 @@ public class Invoice {
     
     while (!input.hasNextInt()) {  //while loop for when user does not input integer.
       input.next();
-      System.out.printf("%nYou must only enter an integer: %n");                                                  //output for cable package header
+      System.out.printf("%nYou must only enter an integer:  %n");                                                  //output for cable package header
       System.out.printf("%n1. Basic: Local & major TV network channels %26s %.2f", '$', 35.00);                   //outputs 1st pkg & cost when user fails to input integer
       System.out.printf("%n2. Deluxe: Local, major TV, cable & 100 other channels %21.2f", 75.00);                //outputs 2nd pkg & cost when user fails to input integer
       System.out.printf("%n3. Premium: Deluxe package plus HBO, on-demand & 300 other channels %8.2f", 110.00);   //outputs 3rd pkg & cost when user fails to input integer
@@ -107,7 +107,7 @@ public class Invoice {
     
     while (!input.hasNextInt()) {
       input.next();
-      System.out.printf("%nYou must only enter an integer: %n");
+      System.out.printf("%nYou must only enter an integer:  %n");
       System.out.printf("%nEnter the number of Movies-On-Demand-HD purchases:  ", (num1+1));
     }
     noOfMovies = input.nextInt();
