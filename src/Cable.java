@@ -83,8 +83,7 @@ public class Cable {
       
       System.out.printf("%nSA CABLE CHARGES AS OF %tD", dateTime);
       System.out.println(billingStmts);
-      printThankYou();
-      
+      printThankYou();     
     }
   }
   /**
