@@ -28,6 +28,7 @@ public class Invoice {
 *By Mathew Jackson
 *This method prints Welcome statement and captures
 *the customers 1st and last name.
+*@param num1 loop control value from the loop that calls it. 
 */
   public void setCustNm(int num1) {
     
@@ -39,6 +40,7 @@ public class Invoice {
 /**
 *By Mathew Jackson
 *This method captures the cable subscription package.
+*@param num1 loop control value from the loop that calls it. 
 */
   public void setCablePkg(int num1) {
     System.out.printf("%nSA CABLE - SUBSCRIPTION PACKAGES - INCLUDES INTERNET SERVICE%n");                          //output for cable package header
@@ -61,6 +63,7 @@ public class Invoice {
 /**
 *By Mathew Jackson
 *This Method Assigns a Price for the Cable Service. 
+*@param num1 loop control value from the loop that calls it. 
 */
   public void determineCableSrv(int num1) {
     
@@ -87,6 +90,7 @@ public class Invoice {
 /**
 *By Mathew Jackson
 *This method captures the number of movies purchased.
+*@param num1 loop control value from the loop that calls it. 
 */  
   public void setMoviesPurchased(int num1) {
     
@@ -104,6 +108,7 @@ public class Invoice {
 /**
 *By Mathew Jackson
 *This is a value returning method for the amount of Movies-On-Demands.
+*@return The product of noOfMovies times 7.
 */ 
   public int getMoviePurchased() {
     return noOfMovies * 7;
@@ -112,6 +117,7 @@ public class Invoice {
 /**
 *By Mathew Jackson
 *This method is a value returning method for the price of cable survice.
+*@return The amount for cableSrv.
 */
   public double getCableSrv() {
     return cableSrv;
@@ -120,6 +126,7 @@ public class Invoice {
 /**
 *By Mathew Jackson
 *This method is a value returning method for the type of Cable Package.
+*@return The cablePkg selected.
 */
   public int getCablePkg() {
     return cablePkg;
@@ -128,6 +135,7 @@ public class Invoice {
 /**
 *By Mathew Jackson
 *This method is a value returning method for the customers name.
+*@return The customer name.
 */
   public String getCustNm() {
     return custNm;
