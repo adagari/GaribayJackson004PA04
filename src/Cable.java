@@ -5,18 +5,22 @@
  * Program Purpose: This is the cable class that has four methods.
  */
 
-import java.util.Scanner;
-import java.time.LocalDate;
+import java.util.Scanner;   //import Scanner for user input.
+import java.time.LocalDate; //import LocalDate to display current date.
 
 public class Cable {
   
-  private Scanner input = new Scanner (System.in);
-  private LocalDate dateTime = LocalDate.now();
-  private Invoice[] cableBills = null;
-  private String[] billingStmts;
+  private Scanner input = new Scanner (System.in);  //declare and initialize new Scanner.
+  private LocalDate dateTime = LocalDate.now();     //declare and initialize new LocalDate.
+  private Invoice[] cableBills = null;              //declare cableBills array.
+  private String[] billingStmts;                    //declare billingStmts array.
   
   
-  public Cable() {  //empty constructor
+/**
+*By Adam Garibay
+*This is any empty constructor.
+*/ 
+  public Cable() {
   }
   
 /**
@@ -24,7 +28,6 @@ public class Cable {
 *This method captures char 'y' or 'n' to start the entire process.
 *If 'y' starts process, else receives printThankYou() method.
 */
-
   public void start() {
     System.out.printf("%nDo you want to begin processing cable  bills? Enter 'Y' or 'N':  ");
     char answer = input.next().charAt(0); //captures char input from user.
@@ -36,9 +39,13 @@ public class Cable {
       printThankYou();
     }
   }
+  
 /**
 *By Adam Garibay
-* This method captures the amount of bills the customer is ready to process.
+*This method captures the amount of bills the customer is ready to process.
+*Sets the array sizes, calls methods in a for loop, calculates the total
+*and movie charges, and adds them as a String.format to the billingStmts
+*array.
 */ 
   public void processBills() {
     
@@ -65,9 +72,10 @@ public class Cable {
                                       cableBills[i].getCableSrv(), ' ', movieCharges, '$', total);
     }
   }
+  
 /**
 *By Adam Garibay
-*
+*This method uses an enhanced for loop to print out the billingStmts array.
 */
   public void displayBills() {
     
@@ -81,7 +89,7 @@ public class Cable {
   }
 /**
 *By Adam Garibay
-* This method thanks our valuable customers!
+*This method thanks our valuable customers!
 */
   public void printThankYou() {
     
