@@ -19,6 +19,12 @@ public class Cable {
   public Cable() {  //empty constructor
   }
   
+/**
+*By Adam Garibay
+*This method captures char 'y' or 'n' to start the entire process.
+*If 'y' starts process, else receives printThankYou() method.
+*/
+
   public void start() {
     System.out.printf("%nDo you want to begin processing cable  bills? Enter 'Y' or 'N':  ");
     char answer = input.next().charAt(0); //captures char input from user.
@@ -30,7 +36,10 @@ public class Cable {
       printThankYou();
     }
   }
-  
+/**
+*By Adam Garibay
+* This method captures the amount of bills the customer is ready to process.
+*/ 
   public void processBills() {
     
     System.out.printf("%nHow many bills are there to process?  ");
@@ -56,7 +65,10 @@ public class Cable {
                                       cableBills[i].getCableSrv(), ' ', movieCharges, '$', total);
     }
   }
-  
+/**
+*By Adam Garibay
+*
+*/
   public void displayBills() {
     
     for (String billingStmts : billingStmts) {
@@ -67,7 +79,10 @@ public class Cable {
       
     }
   }
-  
+/**
+*By Adam Garibay
+* This method thanks our valuable customers!
+*/
   public void printThankYou() {
     
     System.out.printf("%nThank you for being a valued SA Cable Customer!%n%n");
