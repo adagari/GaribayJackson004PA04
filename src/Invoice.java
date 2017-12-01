@@ -22,6 +22,16 @@ public class Invoice {
   public Invoice() {    
   }
   
+   /**
+   *By Mathew Jackson
+   *This is an overloaded constructor which accepts the name of the customer.
+   *@param custNm The name of the customer.
+   */  
+  public Invoice(String custNm) {
+    
+    this.custNm = custNm;
+  }
+  
   /**
    *By Mathew Jackson
    *This method prints Welcome statement and captures
@@ -32,7 +42,7 @@ public class Invoice {
     
     System.out.printf("%nWELCOME TO SA CABLE%n");  //output message header
     System.out.printf("%nPlease enter customer %d's name:  ", (num1+1));
-    this.custNm = input.nextLine();  //captures String input from user.
+    custNm = input.nextLine();  //captures String input from user.
   }
   
   /**
@@ -55,7 +65,7 @@ public class Invoice {
       System.out.printf("%n3. Premium: Deluxe package plus HBO, on-demand & 300 other channels %8.2f", 110.00);   //outputs 3rd pkg & cost when user fails to input integer
       System.out.printf("%n%nSelect the cable subscription package for customer %d:  ", (num1+1));
     }
-    this.cablePkg = input.nextInt();  //captures Int input from user.
+    cablePkg = input.nextInt();  //captures Int input from user.
   }
   
   /**
@@ -71,13 +81,13 @@ public class Invoice {
       switch (cablePkg) {  //switch statment for cableSrv amounts in USD
         
         case 1:
-          this.cableSrv = 35.00;   //1st cable service.
+          cableSrv = 35.00;   //1st cable service.
           break;  //case break
         case 2:
-          this.cableSrv = 75.00;   //2nd cable service.
+          cableSrv = 75.00;   //2nd cable service.
           break;  //case break
         case 3:
-          this.cableSrv = 110.00;  //3rd cable service.
+          cableSrv = 110.00;  //3rd cable service.
           break;  //case break
         default:
           System.out.printf("%nInvalid Selection!%n"); //output for any Int ! 1 through 3
@@ -100,25 +110,16 @@ public class Invoice {
       System.out.printf("%nYou must only enter an integer: %n");
       System.out.printf("%nEnter the number of Movies-On-Demand-HD purchases:  ", (num1+1));
     }
-    this.noOfMovies = input.nextInt();
+    noOfMovies = input.nextInt();
   }
   
   /**
    *By Mathew Jackson
-   *This is a value returning method for the amount of Movies-On-Demands.
-   *@return The product of noOfMovies times 7.
-   */ 
-  public int getMoviePurchased() {
-    return noOfMovies * 7;
-  }
-  
-  /**
-   *By Mathew Jackson
-   *This method is a value returning method for the price of cable survice.
-   *@return The amount for cableSrv.
+   *This method is a value returning method for the customers name.
+   *@return The customer name.
    */
-  public double getCableSrv() {
-    return cableSrv;
+  public String getCustNm() {
+    return custNm;
   }
   
   /**
@@ -132,10 +133,19 @@ public class Invoice {
   
   /**
    *By Mathew Jackson
-   *This method is a value returning method for the customers name.
-   *@return The customer name.
+   *This method is a value returning method for the price of cable survice.
+   *@return The amount for cableSrv.
    */
-  public String getCustNm() {
-    return custNm;
-  }
+  public double getCableSrv() {
+    return cableSrv;
+  } 
+  
+  /**
+   *By Mathew Jackson
+   *This is a value returning method for the amount of Movies-On-Demands.
+   *@return The product of noOfMovies times 7.
+   */ 
+  public int getMoviePurchased() {
+    return noOfMovies * 7;
+  }  
 }
