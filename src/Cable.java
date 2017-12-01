@@ -50,10 +50,10 @@ public class Cable {
   public void processBills() {
     
     System.out.printf("%nHow many bills are there to process?  ");
-    int numBills = input.nextInt(); //captures int from user.
+    int numBills = input.nextInt(); //local variable captures int from user.
     
     cableBills = new Invoice[numBills];
-    billingStmts = new String[cableBills.length];
+    billingStmts = new String[numBills];
     
     for(int i=0; i < numBills; i++) {
       cableBills[i] = new Invoice();
@@ -61,8 +61,8 @@ public class Cable {
       cableBills[i].determineCableSrv(i);
       cableBills[i].setMoviesPurchased(i);
       
-      double total = cableBills[i].getMoviePurchased() + cableBills[i].getCableSrv();
-      double movieCharges = cableBills[i].getMoviePurchased();
+      double total = cableBills[i].getMoviePurchased() + cableBills[i].getCableSrv(); //local variable calculates the total/
+      double movieCharges = cableBills[i].getMoviePurchased();                        //local variable calculates the movie charges.
       
       billingStmts[i] = String.format("%nCustomer: %S"
                                         + "%n%nCable Service: %20c%,10.2f"
