@@ -15,11 +15,22 @@ public class Invoice {
   private double cableSrv = 0;  //declare and initialize cableSrv
   private int noOfMovies = 0;   //declare and initialize noOfMovies
   
-  public Invoice() {    //empty constructor
+/**
+*By Mathew Jackson
+*This is an empty constructor. 
+*/
+  
+  public Invoice() {
     
   }
   
-  public Invoice(String custNm) {
+/**
+*By Mathew Jackson
+*This method prints Welcome statement and captures
+*the customers 1st and last name.
+*@param custNm The customer name is set in global variable. 
+*/
+  public Invoice(String custNm) { 
     
     this.custNm = custNm;
   }
