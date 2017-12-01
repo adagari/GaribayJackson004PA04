@@ -23,7 +23,12 @@ public class Invoice {
     
     this.custNm = custNm;
   }
-  
+
+/**
+*By Mathew Jackson
+*This method prints Welcome statement and captures
+*the customers 1st and last name.
+*/
   public void setCustNm(int num1) {
     
     System.out.printf("%nWELCOME TO SA CABLE%n");  //output message header
@@ -31,6 +36,10 @@ public class Invoice {
     this.custNm = input.nextLine();  //captures String input from user.
   }
   
+/**
+*By Mathew Jackson
+*This method captures the cable subscription package.
+*/
   public void setCablePkg(int num1) {
     System.out.printf("%nSA CABLE - SUBSCRIPTION PACKAGES - INCLUDES INTERNET SERVICE%n");                          //output for cable package header
     System.out.printf("%n1. Basic: Local & major TV network channels %26s %.2f", '$', 35.00);                       //outputs 1st pkg & cost
@@ -48,7 +57,11 @@ public class Invoice {
     }
     this.cablePkg = input.nextInt();  //captures Int input from user.
   }
-  
+
+/**
+*By Mathew Jackson
+*This Method Assigns a Price for the Cable Service. 
+*/
   public void determineCableSrv(int num1) {
     
     do {
@@ -70,7 +83,11 @@ public class Invoice {
       }
     } while (cablePkg < 1 || cablePkg > 3); //while loop continues for any int < 1 or > 3 
   }
-  
+
+/**
+*By Mathew Jackson
+*This method captures the number of movies purchased.
+*/  
   public void setMoviesPurchased(int num1) {
     
     System.out.printf("%nSA CABLE - MOVIES%n");
@@ -83,19 +100,35 @@ public class Invoice {
     }
     this.noOfMovies = input.nextInt();
   }
-  
+ 
+/**
+*By Mathew Jackson
+*This is a value returning method for the amount of Movies-On-Demands.
+*/ 
   public int getMoviePurchased() {
     return noOfMovies * 7;
   }
-  
+ 
+/**
+*By Mathew Jackson
+*This method is a value returning method for the price of cable survice.
+*/
   public double getCableSrv() {
     return cableSrv;
   }
-  
+ 
+/**
+*By Mathew Jackson
+*This method is a value returning method for the type of Cable Package.
+*/
   public int getCablePkg() {
     return cablePkg;
   }
-  
+
+/**
+*By Mathew Jackson
+*This method is a value returning method for the customers name.
+*/
   public String getCustNm() {
     return custNm;
   }
