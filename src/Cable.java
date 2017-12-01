@@ -79,6 +79,8 @@ public class Cable {
    */
   public void displayBills() {
     
+    System.out.println();
+    
     for (String billingStmts : billingStmts) {
       
       System.out.printf("%nSA CABLE CHARGES AS OF %tD", dateTime);
