@@ -18,8 +18,7 @@ public class Invoice {
 /**
 *By Mathew Jackson
 *This is an empty constructor. 
-*/
-  
+*/  
   public Invoice() {
     
   }
