@@ -94,6 +94,6 @@ public class Cable {
    */
   public void printThankYou() {
     
-    System.out.printf("%nThank you for being a valued SA Cable Customer!%n%n");
+    System.out.printf("Thank you for being a valued SA Cable Customer!%n%n");
   } 
 }
