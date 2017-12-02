@@ -14,8 +14,8 @@ public class GaribayJackson004PA04 {
    */
   public static void main(String[] args) {
     
-    Cable cableObject = new Cable();
-    cableObject.start();
+    Cable cableObject = new Cable(); //create object for Cable class 
+    cableObject.start();             //call start() in Cable class
   }
 }
 
